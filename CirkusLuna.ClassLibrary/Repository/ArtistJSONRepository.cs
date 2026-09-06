@@ -5,7 +5,8 @@ namespace CirkusLuna.ClassLibrary.Repository
 {
     public class ArtistJSONRepository : IArtistRepository
     {
-        //fix from "c:/temp path"
+        // JSON persistence saves reservation data between sessions.
+        // The file path is provided through the constructor.
         private readonly string _path;
         private List<Artist> _artistList;
 

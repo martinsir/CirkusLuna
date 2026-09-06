@@ -5,8 +5,8 @@ namespace CirkusLuna.ClassLibrary.Repository
 {
     public class ReservationJSONRepository : IReservationRepository
     {
-        //JSON persistence was implemented to save data between sessions. The file path is currently hardcoded to C:\temp\ due to path resolution challenges in ASP.NET Core. A more robust solution would use IWebHostEnvironment.ContentRootPath."
-
+        // JSON persistence saves reservation data between sessions.
+        // The file path is provided through the constructor.
         private readonly string _path;
         private List<Reservation> _reservations;
 
@@ -16,11 +16,13 @@ namespace CirkusLuna.ClassLibrary.Repository
             if (File.Exists(_path))
             {
                 string json = File.ReadAllText(_path);
-                _reservations = JsonSerializer.Deserialize<List<Reservation>>(json) ?? new List<Reservation>();
+                _reservations =
+                    JsonSerializer.Deserialize<List<Reservation>>(json) ?? new List<Reservation>();
             }
             else
             {
                 _reservations = new List<Reservation>();
+                SaveToFile();
             }
         }
 

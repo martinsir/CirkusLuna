@@ -2,25 +2,52 @@ using CirkusLuna.ClassLibrary.Repository;
 using CirkusLuna.ClassLibrary.Service;
 
 var builder = WebApplication.CreateBuilder(args);
-// Register repositories for dependency injection
-builder.Services.AddSingleton<IEmployeeRepository, EmployeeJSONRepository>();
 
-
-string artistJsonPath = Path.Combine(
+// Path to JSON data folder
+string dataPath = Path.Combine(
     builder.Environment.ContentRootPath,
-    "Data",
-    "artists.json"
+    "Data"
+);
+
+// Make sure the Data folder exists
+Directory.CreateDirectory(dataPath);
+
+// Register repositories for dependency injection
+builder.Services.AddSingleton<IEmployeeRepository>(
+    new EmployeeJSONRepository(
+        Path.Combine(dataPath, "employees.json")
+    )
 );
 
 builder.Services.AddSingleton<IArtistRepository>(
-    new ArtistJSONRepository(artistJsonPath)
+    new ArtistJSONRepository(
+        Path.Combine(dataPath, "artists.json")
+    )
 );
 
+builder.Services.AddSingleton<IShowRepository>(
+    new ShowJSONRepository(
+        Path.Combine(dataPath, "shows.json")
+    )
+);
 
-builder.Services.AddSingleton<IShowRepository, ShowJSONRepository>();
-builder.Services.AddSingleton<ICustomerRepository, CustomerJSONRepository>();
-builder.Services.AddSingleton<IReservationRepository, ReservationJSONRepository>();
-builder.Services.AddSingleton<INewsPostRepository, NewsPostJSONRepository>();
+builder.Services.AddSingleton<ICustomerRepository>(
+    new CustomerJSONRepository(
+        Path.Combine(dataPath, "customers.json")
+    )
+);
+
+builder.Services.AddSingleton<IReservationRepository>(
+    new ReservationJSONRepository(
+        Path.Combine(dataPath, "reservations.json")
+    )
+);
+
+builder.Services.AddSingleton<INewsPostRepository>(
+    new NewsPostJSONRepository(
+        Path.Combine(dataPath, "newsposts.json")
+    )
+);
 
 // Services 
 builder.Services.AddSingleton<IShowService, ShowService>();

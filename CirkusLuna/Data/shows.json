@@ -1,0 +1,200 @@
+[
+  {
+    "Id": 1,
+    "ShowName": "Cirkus Luna Sj\u00E6llands-Tourne",
+    "Date": "2026-07-12",
+    "Seats": 43,
+    "VipSeats": 3,
+    "TotalSeats": 46,
+    "Artists": [
+      {
+        "Act": "Akrobat",
+        "Id": 1,
+        "FirstName": "Mona",
+        "LastName": "Lisa",
+        "Email": "mlisa@cirkusluna.dk",
+        "FullName": "Mona Lisa"
+      },
+      {
+        "Act": "Klovn",
+        "Id": 2,
+        "FirstName": "Hr.",
+        "LastName": "Sk\u00E6g",
+        "Email": "sk\u00E6g@cirkusluna.dk",
+        "FullName": "Hr. Sk\u00E6g"
+      },
+      {
+        "Act": "Strongman",
+        "Id": 3,
+        "FirstName": "Johnny",
+        "LastName": "Ace",
+        "Email": "ace@cirkusluna.dk",
+        "FullName": "Johnny Ace"
+      }
+    ],
+    "City": {
+      "Id": 1,
+      "Name": "K\u00F8benhavn"
+    }
+  },
+  {
+    "Id": 2,
+    "ShowName": "Cirkus Luna Sj\u00E6llands-Tourne",
+    "Date": "2026-07-14",
+    "Seats": 15,
+    "VipSeats": 2,
+    "TotalSeats": 17,
+    "Artists": [
+      {
+        "Act": "Akrobat",
+        "Id": 1,
+        "FirstName": "Mona",
+        "LastName": "Lisa",
+        "Email": "mlisa@cirkusluna.dk",
+        "FullName": "Mona Lisa"
+      },
+      {
+        "Act": "Klovn",
+        "Id": 2,
+        "FirstName": "Hr.",
+        "LastName": "Sk\u00E6g",
+        "Email": "sk\u00E6g@cirkusluna.dk",
+        "FullName": "Hr. Sk\u00E6g"
+      },
+      {
+        "Act": "Jongl\u00F8r",
+        "Id": 4,
+        "FirstName": "Benny",
+        "LastName": "Bent",
+        "Email": "bent@cirkusluna.dk",
+        "FullName": "Benny Bent"
+      }
+    ],
+    "City": {
+      "Id": 2,
+      "Name": "Roskilde"
+    }
+  },
+  {
+    "Id": 3,
+    "ShowName": "Cirkus Luna Fyn",
+    "Date": "2026-07-22",
+    "Seats": 110,
+    "VipSeats": 10,
+    "TotalSeats": 120,
+    "Artists": [
+      {
+        "Act": "Akrobat",
+        "Id": 1,
+        "FirstName": "Mona",
+        "LastName": "Lisa",
+        "Email": "mlisa@cirkusluna.dk",
+        "FullName": "Mona Lisa"
+      },
+      {
+        "Act": "Klovn",
+        "Id": 2,
+        "FirstName": "Hr.",
+        "LastName": "Sk\u00E6g",
+        "Email": "sk\u00E6g@cirkusluna.dk",
+        "FullName": "Hr. Sk\u00E6g"
+      },
+      {
+        "Act": "Jongl\u00F8r",
+        "Id": 4,
+        "FirstName": "Benny",
+        "LastName": "Bent",
+        "Email": "bent@cirkusluna.dk",
+        "FullName": "Benny Bent"
+      },
+      {
+        "Act": "Linedanser",
+        "Id": 5,
+        "FirstName": "Mette",
+        "LastName": "Munk",
+        "Email": "munk@cirkusluna.dk",
+        "FullName": "Mette Munk"
+      }
+    ],
+    "City": {
+      "Id": 3,
+      "Name": "Odense"
+    }
+  },
+  {
+    "Id": 4,
+    "ShowName": "Cirkus Luna Jyllands-Tourne",
+    "Date": "2026-08-03",
+    "Seats": 70,
+    "VipSeats": 8,
+    "TotalSeats": 78,
+    "Artists": [
+      {
+        "Act": "Klovn",
+        "Id": 2,
+        "FirstName": "Hr.",
+        "LastName": "Sk\u00E6g",
+        "Email": "sk\u00E6g@cirkusluna.dk",
+        "FullName": "Hr. Sk\u00E6g"
+      },
+      {
+        "Act": "Strongman",
+        "Id": 3,
+        "FirstName": "Johnny",
+        "LastName": "Ace",
+        "Email": "ace@cirkusluna.dk",
+        "FullName": "Johnny Ace"
+      },
+      {
+        "Act": "Jongl\u00F8r",
+        "Id": 4,
+        "FirstName": "Benny",
+        "LastName": "Bent",
+        "Email": "bent@cirkusluna.dk",
+        "FullName": "Benny Bent"
+      }
+    ],
+    "City": {
+      "Id": 4,
+      "Name": "Aalborg"
+    }
+  },
+  {
+    "Id": 5,
+    "ShowName": "Cirkus Luna Jyllands-Tourne",
+    "Date": "2026-08-06",
+    "Seats": 37,
+    "VipSeats": 6,
+    "TotalSeats": 43,
+    "Artists": [
+      {
+        "Act": "Klovn",
+        "Id": 2,
+        "FirstName": "Hr.",
+        "LastName": "Sk\u00E6g",
+        "Email": "sk\u00E6g@cirkusluna.dk",
+        "FullName": "Hr. Sk\u00E6g"
+      },
+      {
+        "Act": "Strongman",
+        "Id": 3,
+        "FirstName": "Johnny",
+        "LastName": "Ace",
+        "Email": "ace@cirkusluna.dk",
+        "FullName": "Johnny Ace"
+      },
+      {
+        "Act": "Jongl\u00F8r",
+        "Id": 4,
+        "FirstName": "Benny",
+        "LastName": "Bent",
+        "Email": "bent@cirkusluna.dk",
+        "FullName": "Benny Bent"
+      }
+    ],
+    "City": {
+      "Id": 5,
+      "Name": "\u00C5rhus"
+    }
+  }
+]

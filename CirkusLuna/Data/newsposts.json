@@ -1,0 +1,26 @@
+[
+  {
+    "NewsPostId": 1,
+    "Title": "Ny Elefant!",
+    "Content": "Vi har f\u00E5et en ny elefant....",
+    "PublishedDateTime": "2026-05-01T00:00:00"
+  },
+  {
+    "NewsPostId": 2,
+    "Title": "10 \u00E5rs Jubil\u00E6um",
+    "Content": "Benny Bl\u00E6k har 10 \u00E5rs jubil\u00E6um, det fejrer vi med...",
+    "PublishedDateTime": "2026-06-01T00:00:00"
+  },
+  {
+    "NewsPostId": 3,
+    "Title": "S\u00E6sonen 3 starter!",
+    "Content": "Vi er klar til en ny s\u00E6son...",
+    "PublishedDateTime": "2026-07-01T00:00:00"
+  },
+  {
+    "NewsPostId": 4,
+    "Title": "Ny Stjerne!",
+    "Content": "Kom og oplev vores nyeste artist...",
+    "PublishedDateTime": "2026-08-01T00:00:00"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "PhoneNumber": "56345678",
+    "IsVip": false,
+    "Id": 1,
+    "FirstName": "Gunner",
+    "LastName": "Gunnersen",
+    "Email": "gumhmail@mail.com",
+    "FullName": "Gunner Gunnersen"
+  },
+  {
+    "PhoneNumber": "35345678",
+    "IsVip": false,
+    "Id": 2,
+    "FirstName": "\u00C5ge",
+    "LastName": "\u00C5gesen",
+    "Email": "\u00E5mhmail@mail.com",
+    "FullName": "\u00C5ge \u00C5gesen"
+  },
+  {
+    "PhoneNumber": "20345678",
+    "IsVip": false,
+    "Id": 3,
+    "FirstName": "Viggo",
+    "LastName": "Viggosen",
+    "Email": "vigmhmail@mail.com",
+    "FullName": "Viggo Viggosen"
+  },
+  {
+    "PhoneNumber": "89345678",
+    "IsVip": false,
+    "Id": 4,
+    "FirstName": "Maja",
+    "LastName": "Majasen",
+    "Email": "majmhmail@mail.com",
+    "FullName": "Maja Majasen"
+  },
+  {
+    "PhoneNumber": "12995678",
+    "IsVip": true,
+    "Id": 5,
+    "FirstName": "Shen",
+    "LastName": "Hana",
+    "Email": "shemhmail@mail.com",
+    "FullName": "Shen Hana"
+  }
+]

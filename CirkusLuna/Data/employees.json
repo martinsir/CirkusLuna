@@ -1,0 +1,29 @@
+[
+  {
+    "Role": "Direkt\u00F8r",
+    "Password": "bl\u00E6k",
+    "Id": 1,
+    "FirstName": "Benny",
+    "LastName": "Bl\u00E6k",
+    "Email": "bl\u00E6k@cirkusluna.dk",
+    "FullName": "Benny Bl\u00E6k"
+  },
+  {
+    "Role": "Sekret\u00E6r",
+    "Password": "hansen",
+    "Id": 2,
+    "FirstName": "Dorte",
+    "LastName": "Hansen",
+    "Email": "hansen@cirkusluna.dk",
+    "FullName": "Dorte Hansen"
+  },
+  {
+    "Role": "V\u00E6rt",
+    "Password": "manfredi",
+    "Id": 3,
+    "FirstName": "Manfred",
+    "LastName": "Manfredi",
+    "Email": "manfredi@cirkusluna.dk",
+    "FullName": "Manfred Manfredi"
+  }
+]
