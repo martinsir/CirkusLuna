@@ -4,7 +4,19 @@ using CirkusLuna.ClassLibrary.Service;
 var builder = WebApplication.CreateBuilder(args);
 // Register repositories for dependency injection
 builder.Services.AddSingleton<IEmployeeRepository, EmployeeJSONRepository>();
-builder.Services.AddSingleton<IArtistRepository, ArtistJSONRepository>();
+
+
+string artistJsonPath = Path.Combine(
+    builder.Environment.ContentRootPath,
+    "Data",
+    "artists.json"
+);
+
+builder.Services.AddSingleton<IArtistRepository>(
+    new ArtistJSONRepository(artistJsonPath)
+);
+
+
 builder.Services.AddSingleton<IShowRepository, ShowJSONRepository>();
 builder.Services.AddSingleton<ICustomerRepository, CustomerJSONRepository>();
 builder.Services.AddSingleton<IReservationRepository, ReservationJSONRepository>();

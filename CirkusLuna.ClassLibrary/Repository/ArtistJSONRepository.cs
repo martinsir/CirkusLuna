@@ -5,13 +5,20 @@ namespace CirkusLuna.ClassLibrary.Repository
 {
     public class ArtistJSONRepository : IArtistRepository
     {
-        //JSON persistence was implemented to save data between sessions. The file path is currently hardcoded to C:\temp\ due to path resolution challenges in ASP.NET Core. A more robust solution would use IWebHostEnvironment.ContentRootPath."
-
-        private readonly string _path = @"C:\temp\artists.json";
+        //fix from "c:/temp path"
+        private readonly string _path;
         private List<Artist> _artistList;
 
-        public ArtistJSONRepository()
+        public ArtistJSONRepository(string path)
         {
+            _path = path;
+
+            string? directory = Path.GetDirectoryName(_path);
+
+            if (!string.IsNullOrEmpty(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
             if (File.Exists(_path))
             {
                 //Sti til JSON fil - gemmers i programmets output mappe
