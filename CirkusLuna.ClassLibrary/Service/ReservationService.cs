@@ -1,8 +1,5 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Service
 {
@@ -25,7 +22,6 @@ namespace CirkusLuna.ClassLibrary.Service
                 return false; //show is in the past
             }
 
-
             //count booked seats
             List<Reservation> currentReservations = _reservationRepository.GetByShow(reservation.Show.Id);
             int bookedSeats = 0;
@@ -41,7 +37,6 @@ namespace CirkusLuna.ClassLibrary.Service
                 {
                     bookedSeats += currentReservations[i].TotalSeats;
                 }
-
             }
 
             //check available seats
@@ -51,7 +46,6 @@ namespace CirkusLuna.ClassLibrary.Service
                 {
                     return false; //Not enough VIP seats
                 }
-
             }
             else
             {
@@ -59,11 +53,9 @@ namespace CirkusLuna.ClassLibrary.Service
                 {
                     return false; //not enough standard seats
                 }
-
             }
             _reservationRepository.Add(reservation);
             return true;
-
         }
 
         public List<Reservation> GetAll()
@@ -135,6 +127,5 @@ namespace CirkusLuna.ClassLibrary.Service
         {
             _reservationRepository.Delete(id);
         }
-
     }
 }

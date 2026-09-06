@@ -1,5 +1,5 @@
-using System.Text.Json;
 using CirkusLuna.ClassLibrary.Model;
+using System.Text.Json;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
@@ -8,6 +8,7 @@ namespace CirkusLuna.ClassLibrary.Repository
         // JSON persistence saves reservation data between sessions.
         // The file path is provided through the constructor.
         private readonly string _path;
+
         private List<Reservation> _reservations;
 
         public ReservationJSONRepository(string path)

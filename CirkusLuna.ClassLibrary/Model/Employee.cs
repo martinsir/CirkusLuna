@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CirkusLuna.ClassLibrary.Model
+﻿namespace CirkusLuna.ClassLibrary.Model
 {
     public class Employee : Person
     {
         //Specifikke properties til Employee
         public string Role { get; set; } = string.Empty;
+
         public string Password { get; set; } = string.Empty;
 
         //Constructor

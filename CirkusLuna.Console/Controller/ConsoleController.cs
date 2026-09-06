@@ -7,6 +7,7 @@ namespace CirkusLuna.Console.Controller
     {
         // Private fields til alle services
         private IShowService _showService;
+
         private IReservationService _reservationService;
         private ICustomerService _customerService;
         private IArtistService _artistService;
@@ -270,6 +271,5 @@ namespace CirkusLuna.Console.Controller
         {
             _newsPostService.DeleteNewsPost(id);
         }
-
     }
 }

@@ -1,26 +1,32 @@
-﻿using System.Text.Json;
-using CirkusLuna.ClassLibrary.Model;
+﻿using CirkusLuna.ClassLibrary.Model;
+using System.Text.Json;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
     public class CustomerJSONRepository : ICustomerRepository
     {
-        // JSON persistence saves reservation data between sessions.
+        // JSON persistence saves customer data between sessions.
         // The file path is provided through the constructor.
         private readonly string _path;
+
         private List<Customer> _customerList;
 
         public CustomerJSONRepository(string path)
         {
             _path = path;
+
+            // Load existing JSON data if the file already exists.
             if (File.Exists(_path))
             {
                 string json = File.ReadAllText(_path);
-                _customerList = JsonSerializer.Deserialize<List<Customer>>(json) ?? new List<Customer>();
+
+                _customerList =
+                    JsonSerializer.Deserialize<List<Customer>>(json)
+                    ?? new List<Customer>();
             }
             else
             {
-                //Hardcoded kunder, tilføjes første gang før filen ikke eksisterer
+                // Create default customers the first time the JSON file is created.
                 _customerList = new List<Customer>
                 {
                     new Customer(1, "Gunner", "Gunnersen", "gumhmail@mail.com", "56345678", false),
@@ -29,24 +35,29 @@ namespace CirkusLuna.ClassLibrary.Repository
                     new Customer(4, "Maja", "Majasen", "majmhmail@mail.com", "89345678", false),
                     new Customer(5, "Shen", "Hana", "shemhmail@mail.com", "12995678", true)
                 };
+
                 SaveToFile();
             }
         }
 
-        //Gemmer data til filen
+        // Save customer data to the JSON file.
         private void SaveToFile()
         {
-            string json = JsonSerializer.Serialize(_customerList, new JsonSerializerOptions { WriteIndented = true });
+            string json = JsonSerializer.Serialize(
+                _customerList,
+                new JsonSerializerOptions { WriteIndented = true }
+            );
+
             File.WriteAllText(_path, json);
         }
 
-        // Returnerer alle kunder
+        // Return all customers.
         public List<Customer> GetAll()
         {
             return _customerList;
         }
 
-        // Finder og returnerer kunde på ID - returnerer null hvis kunde ikke kan findes
+        // Find a customer by ID. Returns null if no customer is found.
         public Customer GetById(int id)
         {
             for (int i = 0; i < _customerList.Count; i++)
@@ -54,17 +65,18 @@ namespace CirkusLuna.ClassLibrary.Repository
                 if (_customerList[i].Id == id)
                     return _customerList[i];
             }
+
             return null;
         }
 
-        // Tilføjer ny kunde og gemmer til fil
+        // Add a new customer and save the changes.
         public void Add(Customer customer)
         {
             _customerList.Add(customer);
             SaveToFile();
         }
 
-        // Opdaterer eksisterende kunde og gemmer til fil
+        // Update an existing customer and save the changes.
         public void Update(Customer customer)
         {
             for (int i = 0; i < _customerList.Count; i++)
@@ -79,10 +91,11 @@ namespace CirkusLuna.ClassLibrary.Repository
                     break;
                 }
             }
+
             SaveToFile();
         }
 
-        // Sletter kunde på ID og gemmer til fil
+        // Delete a customer by ID and save the changes.
         public void Delete(int id)
         {
             _customerList.Remove(GetById(id));

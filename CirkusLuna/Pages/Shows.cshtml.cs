@@ -1,9 +1,7 @@
-
 using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 
 namespace CirkusLuna.Pages
 {
@@ -18,14 +16,13 @@ namespace CirkusLuna.Pages
         //constructor
         public ShowsModel(IShowService showService)
         {
-
             _showService = showService;
-
         }
 
-        //BindProperty is new for me so ill include it and paste an alternative 
+        //BindProperty is new for me so ill include it and paste an alternative
         [BindProperty(SupportsGet = true)]
         public string SearchCity { get; set; } = string.Empty;
+
         //If i was to use something else than bind property,
         //it would be as as below
         //SearchCity = Request.Query["SearchCity"]
@@ -76,7 +73,6 @@ namespace CirkusLuna.Pages
                 }
                 Shows = availableResult;
             }
-
         }
     }
 }

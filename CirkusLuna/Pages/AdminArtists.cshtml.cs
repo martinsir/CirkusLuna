@@ -1,6 +1,5 @@
 using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CirkusLuna.Pages
@@ -15,6 +14,7 @@ namespace CirkusLuna.Pages
         {
             _artistRepository = artistRepository;
         }
+
         public void OnGet()
         {
             Artists = _artistRepository.GetAll();

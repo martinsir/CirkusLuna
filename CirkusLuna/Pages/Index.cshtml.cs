@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CirkusLuna.Pages
@@ -7,7 +6,6 @@ namespace CirkusLuna.Pages
     {
         public void OnGet()
         {
-
         }
     }
 }

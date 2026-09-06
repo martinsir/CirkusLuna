@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CirkusLuna.ClassLibrary.Model
+﻿namespace CirkusLuna.ClassLibrary.Model
 {
     public class Customer : Person //Customer arver fra Person
     {
         //Specifikke properties til customer
         public string PhoneNumber { get; set; } = string.Empty;
+
         public bool IsVip { get; set; }
 
         //Constructor
@@ -17,7 +14,6 @@ namespace CirkusLuna.ClassLibrary.Model
         {
             PhoneNumber = phoneNumber;
             IsVip = isVip;
-
         }
     }
 }

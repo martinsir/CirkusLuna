@@ -1,7 +1,4 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
@@ -13,7 +10,7 @@ namespace CirkusLuna.ClassLibrary.Repository
         public ReservationRepository(IShowRepository showRepository, ICustomerRepository customerRepository)
         {
             //Efter oprettelse af JSONRepo kan denne constructor i princippet være tom da data nu håndteres af ReservationJSONRepository.
-            //Dette bliver ikke loadet mere. 
+            //Dette bliver ikke loadet mere.
             //Hent shows
             Show show1 = showRepository.GetById(1);
             //Hent customers
@@ -22,13 +19,14 @@ namespace CirkusLuna.ClassLibrary.Repository
             Reservation reservation1 = new Reservation(1, new DateTime(2026, 7, 12, 3, 0, 0), TicketType.Standard, 5, 5, customer1, show1);
             _reservations.Add(reservation1);
         }
+
         public List<Reservation> GetAll()
         {
             return _reservations;
         }
+
         public Reservation GetById(int id)
         {
-
             for (int i = 0; i < _reservations.Count; i++)
             {
                 if (_reservations[i].ReservationId == id)
@@ -43,6 +41,7 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             _reservations.Add(reservation);
         }
+
         public void Update(Reservation reservation)
         {
             for (int i = 0; i < _reservations.Count; i++)
@@ -58,12 +57,11 @@ namespace CirkusLuna.ClassLibrary.Repository
                     break; //no point continuing the loop
                 }
             }
-
         }
+
         public void Delete(int id)
         {
             _reservations.Remove(GetById(id));
-
         }
 
         public List<Reservation> GetByCustomer(int id)
@@ -84,15 +82,12 @@ namespace CirkusLuna.ClassLibrary.Repository
             List<Reservation> result = new List<Reservation>();
             for (int i = 0; i < _reservations.Count; i++)
             {
-
                 if (_reservations[i].Show.Id == id) //check show id
                 {
                     result.Add(_reservations[i]);
                 }
             }
             return result;
-
         }
-
     }
 }

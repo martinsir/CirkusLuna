@@ -1,7 +1,6 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
 
-
 namespace CirkusLuna.ClassLibrary.Service
 {
     public class ArtistService : IArtistService
@@ -65,6 +64,5 @@ namespace CirkusLuna.ClassLibrary.Service
         {
             _artistRepository.Delete(id);
         }
-
     }
 }

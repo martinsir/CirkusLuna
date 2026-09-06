@@ -43,5 +43,23 @@
     "LastName": "Hana",
     "Email": "shemhmail@mail.com",
     "FullName": "Shen Hana"
+  },
+  {
+    "PhoneNumber": "12345678",
+    "IsVip": false,
+    "Id": 6,
+    "FirstName": "Martin",
+    "LastName": "S. Bambus",
+    "Email": "martinbambusesEmail@hotmail.com",
+    "FullName": "Martin S. Bambus"
+  },
+  {
+    "PhoneNumber": "12345678",
+    "IsVip": false,
+    "Id": 7,
+    "FirstName": "Martin",
+    "LastName": "S. Bambus",
+    "Email": "bamusemail@hotmail.com",
+    "FullName": "Martin S. Bambus"
   }
 ]

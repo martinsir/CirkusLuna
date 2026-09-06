@@ -49,7 +49,7 @@ builder.Services.AddSingleton<INewsPostRepository>(
     )
 );
 
-// Services 
+// Services
 builder.Services.AddSingleton<IShowService, ShowService>();
 builder.Services.AddSingleton<IReservationService, ReservationService>();
 

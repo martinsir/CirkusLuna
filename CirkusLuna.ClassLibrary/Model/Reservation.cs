@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CirkusLuna.ClassLibrary.Model
+﻿namespace CirkusLuna.ClassLibrary.Model
 {
     public class Reservation
     {
@@ -13,9 +9,11 @@ namespace CirkusLuna.ClassLibrary.Model
         public TicketType TicketType { get; set; }
         public int TotalSeats { get; set; }
         public int SeatNumber { get; set; }
+
         // reservation you can directly access reservation.Customer.FullName or reservation.Show.Date
         //Signaling datatype Customer and Show that it can be null with a ? operator
         public Customer? Customer { get; set; }
+
         public Show? Show { get; set; }
 
         //Constructor
@@ -28,7 +26,6 @@ namespace CirkusLuna.ClassLibrary.Model
             SeatNumber = seatNumber;
             Customer = customer;
             Show = show;
-
         }
     }
 }

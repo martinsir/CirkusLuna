@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Principal;
-using System.Text;
-
-namespace CirkusLuna.ClassLibrary.Model
+﻿namespace CirkusLuna.ClassLibrary.Model
 {
     public class ShowArtist
     {
@@ -12,6 +7,7 @@ namespace CirkusLuna.ClassLibrary.Model
         public int ShowArtistId { get; set; }
         public int PerformOrder { get; set; }
         public string RoleInShow { get; set; } = string.Empty;
+
         public ShowArtist(Artist artist, Show show, int showArtistId, int performOder, string roleInShow)
         {
             Artist = artist;

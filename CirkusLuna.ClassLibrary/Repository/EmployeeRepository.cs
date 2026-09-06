@@ -1,7 +1,4 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
@@ -21,16 +18,15 @@ namespace CirkusLuna.ClassLibrary.Repository
             _employeeList.Add(employee1);
             _employeeList.Add(employee2);
             _employeeList.Add(employee3);
-
         }
 
         public List<Employee> GetAll()
         {
             return _employeeList;
         }
+
         public Employee GetById(int id)
         {
-
             for (int i = 0; i < _employeeList.Count; i++)
             {
                 if (_employeeList[i].Id == id)
@@ -48,10 +44,10 @@ namespace CirkusLuna.ClassLibrary.Repository
 
         public void Update(Employee employee)
         {
-            for (int i = 0; i < _employeeList.Count; i++) 
+            for (int i = 0; i < _employeeList.Count; i++)
             {
-                if (_employeeList[i].Id == employee.Id) 
-                { 
+                if (_employeeList[i].Id == employee.Id)
+                {
                     _employeeList[i].FirstName = employee.FirstName;
                     _employeeList[i].LastName = employee.LastName;
                     _employeeList[i].Email = employee.Email;
@@ -66,6 +62,5 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             _employeeList.Remove(GetById(id));
         }
-
     }
 }

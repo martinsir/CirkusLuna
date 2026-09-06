@@ -1,7 +1,4 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
@@ -19,7 +16,6 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             return _newsposts;
         }
-
 
         public NewsPost GetById(int id)
         {
@@ -43,7 +39,6 @@ namespace CirkusLuna.ClassLibrary.Repository
                 {
                     result.Add(_newsposts[i]);
                 }
-
             }
             return result;
         }
@@ -57,7 +52,6 @@ namespace CirkusLuna.ClassLibrary.Repository
                 {
                     result.Add(_newsposts[i]);
                 }
-
             }
             return result;
         }
@@ -86,7 +80,6 @@ namespace CirkusLuna.ClassLibrary.Repository
         public void Delete(int id)
         {
             _newsposts.Remove(GetById(id));
-
         }
     }
 }

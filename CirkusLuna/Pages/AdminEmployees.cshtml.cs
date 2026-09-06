@@ -1,6 +1,5 @@
 using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CirkusLuna.Pages
@@ -14,8 +13,8 @@ namespace CirkusLuna.Pages
         public AdminEmployeesModel(IEmployeeRepository employeeRepository)
         {
             _employeeRepository = employeeRepository;
-
         }
+
         public void OnGet()
         {
             Employees = _employeeRepository.GetAll();

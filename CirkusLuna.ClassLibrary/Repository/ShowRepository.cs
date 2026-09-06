@@ -1,6 +1,5 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
 
-
 namespace CirkusLuna.ClassLibrary.Repository
 {
     public class ShowRepository : IShowRepository
@@ -55,7 +54,7 @@ namespace CirkusLuna.ClassLibrary.Repository
         //Funktion til at kunne opdatere Shows
         public void Update(Show show)
         {
-            for (int i = 0;  i < _shows.Count; i++)
+            for (int i = 0; i < _shows.Count; i++)
             {
                 if (_shows[i].Id == show.Id)
                 {
@@ -72,6 +71,5 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             _shows.Remove(GetById(id));
         }
-
     }
 }

@@ -2,31 +2,51 @@
 @model CirkusLuna.Pages.ReservationModel
 @using CirkusLuna.ClassLibrary.Model
 @{
+    DateOnly today = DateOnly.FromDateTime(DateTime.Today);
 }
 
 <div class="container mt-4">
     <h1>Reserver billetter</h1>
 
-    @* success /fail message *@
+    @* Success / failure message *@
 
     @if (!string.IsNullOrEmpty(Model.Message))
 
     {
         <div class="alert alert-info">@Model.Message</div>
-        
+
     }
 
     <form method="post">
 
-        @* show dropdown *@
+        @* Show dropdown *@
         <div class="mb-3">
 
             <label>Vælg forestilling</label>
-            <select class="form-control" name="ShowId">
+            <select asp-for="ShowId" class="form-control">
+
+                <option value="0" disabled selected>
+                    -- Vælg forestilling --
+                </option>
+
                 @foreach (Show show in Model.Shows)
                 {
-                    <option value="@show.Id">@show.ShowName - @show.City.Name - @show.Date</option>
+                    bool isExpired = show.Date < today;
+
+                    if (isExpired)
+                    {
+                        <option value="@show.Id" disabled>
+                            @show.ShowName - @show.City.Name - @show.Date.ToString("dd-MM-yyyy") - Afholdt
+                        </option>
+                    }
+                    else
+                    {
+                        <option value="@show.Id">
+                            @show.ShowName - @show.City.Name - @show.Date.ToString("dd-MM-yyyy")
+                        </option>
+                    }
                 }
+
             </select>
         </div>
 
@@ -51,7 +71,7 @@
             <input type="text" class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" />
         </div>
 
-        @* tikcet type *@
+        @* Ticket type *@
 
         <div class="mb-3">
             <label>Billettype</label>
@@ -62,7 +82,7 @@
             </select>
         </div>
 
-        @* number of ticktes *@
+        @* Number of tickets *@
         <div class="mb-3">
             <label>Antal billetter</label>
             <input type="number" class="form-control" name="TotalSeats" min="1" />

@@ -1,14 +1,10 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Service
 {
     public class ShowService : IShowService
     {
-
         private IShowRepository _showRepository;
 
         public ShowService(IShowRepository showRepository)
@@ -34,7 +30,6 @@ namespace CirkusLuna.ClassLibrary.Service
                 }
             }
             return result;
-
         }
 
         public List<Show> GetByDateOnly(DateOnly date)
@@ -52,7 +47,7 @@ namespace CirkusLuna.ClassLibrary.Service
             return result;
         }
 
-        //bubble sorting 
+        //bubble sorting
         public List<City> GetSortedCities()
         {
             List<Show> shows = _showRepository.GetAll();
@@ -141,7 +136,5 @@ namespace CirkusLuna.ClassLibrary.Service
         {
             _showRepository.Delete(id);
         }
-
-
     }
 }

@@ -17,5 +17,4 @@ namespace CirkusLuna.Pages
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
-
 }

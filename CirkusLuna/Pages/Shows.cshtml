@@ -2,6 +2,7 @@
 @model CirkusLuna.Pages.ShowsModel
 @using CirkusLuna.ClassLibrary.Model
 @{
+    DateOnly today = DateOnly.FromDateTime(DateTime.Today);
 }
 
 <div class="container mt-4">
@@ -41,13 +42,19 @@
 
     @foreach (Show show in Model.Shows)
     {
-   
+        bool isExpired = show.Date < today;
+
         //show shows
-        <div class="card mb-3">
+        <div class="card mb-3 @(isExpired ? "expired-show" : "")">
 
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
 
-                <h5>@show.ShowName</h5>
+                <h5 class="mb-0">@show.ShowName</h5>
+
+                @if (isExpired)
+                {
+                    <span class="badge bg-secondary">Afholdt</span>
+                }
 
             </div>
 
@@ -63,12 +70,11 @@
                 {
                     <span class="badge bg-primary">@artist.FullName - @artist.Act </span>
                 }
-               
+
             </div>
 
         </div>
 
-        
     }
 
 </div>

@@ -1,6 +1,5 @@
 using CirkusLuna.ClassLibrary.Model;
 using CirkusLuna.ClassLibrary.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CirkusLuna.Pages
@@ -19,7 +18,6 @@ namespace CirkusLuna.Pages
 
         //[Bindproperty(SupportsGet = true)]
         //public string SearchTitle { get; set; } = string.Empty;
-
 
         public void OnGet()
         {

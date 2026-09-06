@@ -1,13 +1,10 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
     public class ArtistRepository : IArtistRepository
     {
-        private List <Artist> _artistList = new List<Artist>();
+        private List<Artist> _artistList = new List<Artist>();
 
         public ArtistRepository()
         {
@@ -18,9 +15,9 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             return _artistList;
         }
+
         public Artist GetById(int id)
         {
-
             for (int i = 0; i < _artistList.Count; i++)
             {
                 if (_artistList[i].Id == id)
@@ -51,7 +48,6 @@ namespace CirkusLuna.ClassLibrary.Repository
                     break;
                 }
             }
-
         }
 
         //Delete funktion, så artister kan slettes i programmet
@@ -59,7 +55,5 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             _artistList.Remove(GetById(id));
         }
-
     }
-
 }

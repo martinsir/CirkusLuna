@@ -1,7 +1,4 @@
 ﻿using CirkusLuna.ClassLibrary.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CirkusLuna.ClassLibrary.Repository
 {
@@ -13,13 +10,14 @@ namespace CirkusLuna.ClassLibrary.Repository
         {
             //Tom constructor, data håndteres af CustomerJSONRepository
         }
+
         public List<Customer> GetAll()
         {
             return _customerList;
         }
+
         public Customer GetById(int id)
         {
-
             for (int i = 0; i < _customerList.Count; i++)
             {
                 if (_customerList[i].Id == id)
@@ -33,7 +31,6 @@ namespace CirkusLuna.ClassLibrary.Repository
         public void Add(Customer customer)
         {
             _customerList.Add(customer);
-
         }
 
         public void Update(Customer customer)
@@ -50,14 +47,11 @@ namespace CirkusLuna.ClassLibrary.Repository
                     break; //no point continuing the loop
                 }
             }
-
         }
+
         public void Delete(int id)
         {
             _customerList.Remove(GetById(id));
-
         }
-
-
     }
 }
